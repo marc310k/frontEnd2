@@ -6,30 +6,31 @@
         <link rel="stylesheet" href="style.css">
      </head>
     <body>
-        <div id="container">
-            <h1 id='title'>Calculadora</h1>
-            <div class='main'>
-                <form name='form'> 
-                    <input type="text" name="text" id="txtValor1">
-                    </form>                  
-                    <select id="operadores" onchange="ControleDeSelecao();">
-                        <optgroup label="Basico">
-                            <option value="+">	+(somar)</option>
-                            <option value="-">	-(subtrair)</option>
-                            <option value="*">	*(multiplicar)</option>
-                            <option value="/">	/(dividir)</option>
-                        </optgroup>
-                       
-                    </select>
-                <input type="text" id="txtValor2" size="5"><br>		
-                <input type="button" onclick="Calcular('txtValor1', 'txtValor2')" value="Calcular">
-                <input type="button" onclick="Limpar('txtValor1', 'txtValor2')" value="Limpar">
-                <p id="saida">Resultado:</p>
-                <hr>      
-                
+        
+            <form id="frm"  >
+                <div id="container">
+                   <div id="topo"> 
+                      <h1>Calculadora</h1>
+                   <div id="left">
+                    <div class="bloco1">
+                         <span>Introduza os numeros:</span><br>
+                         <input type="text" size="2" id="n1" placeholder="n1"><input type="text" size="2"  id="n2" placeholder="n2">
+                         <br><br>
+                         <input type="button" value="+" onClick="calc(this)">
+                         <input type="button" value="-" onClick="calc(this)">
+                         <input type="button" value="*" onClick="calc(this)">
+                         <input type="button" value="/" onClick="calc(this)">
+                         <br><br>
+                         <input type="button" value="Limpar" onClick="limpar()"/>
+                    </div>
+                   </div>
+                </div>
+             </form>
+        <script src="scripts/somar.js"></script>
+        <script src="scripts/subtrair.js"></script>
+        <script src="scripts/multiplicar.js"></script>
+        <script src="scripts/dividir.js"></script>
 
-            </div>
-        </div>
-        <script src="scripts/soma.js"></script>
+        <script src="scripts/calculadora.js"></script>
     </body>
 </html>
